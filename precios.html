@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Precios y Planes - USVM</title>
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <img src="logo.jpeg" alt="Logo USVM" class="logo" />
+    <h1  class="pulse-text">Universidad USVM</h1>
+  </div>
+  <nav>
+    <button id="menu-toggle">☰ Menú</button>
+    <ul id="menu" class="menu hidden">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carreras.html">Carreras</a></li>
+      <li><a href="precios.html">Precios y Planes</a></li>
+      <li><a href="mision.html">Misión y Visión</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content-page">
+
+ <h2 class="animated-text glow-text pulse-text">!descrubre tu carrera¡</h2>
+    <section id="quiz" class="quiz-container">
+  <h2>¿Cuál carrera es para ti?</h2>
+  <form id="quiz-form">
+    <div class="question">
+      <label>¿Qué área te interesa más?</label>
+      <select id="area" name="area" required>
+        <option value="">Selecciona una opción</option>
+        <option value="salud">Salud</option>
+        <option value="negocios">Negocios</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="derecho">Derecho</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <label>¿Prefieres estudiar en la mañana o en la tarde?</label>
+      <select id="horario" name="horario" required>
+        <option value="">Selecciona una opción</option>
+        <option value="manana">Mañana</option>
+        <option value="tarde">Tarde</option>
+      </select>
+    </div>
+
+    <button type="submit">Descubrir carrera</button>
+  </form>
+
+  <div id="result" class="result hidden"></div>
+</section>
+
+  <section class="precios-section">
+    <h2 class="animated-text glow-text pulse-text">Planes y Precios</h2>
+
+    <table class="tabla-precios">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Semestre</th>
+          <th>Año</th>
+          <th>Total Carrera</th>
+          <th>Beca</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Nutrición</td><td>$15,000</td><td>$28,000</td><td>$112,000</td><td>10%</td></tr>
+        <tr><td>Negocios Internacionales</td><td>$18,000</td><td>$34,000</td><td>$136,000</td><td>15%</td></tr>
+        <tr><td>Programación</td><td>$20,000</td><td>$38,000</td><td>$152,000</td><td>20%</td></tr>
+        <tr><td>Medicina</td><td>$25,000</td><td>$48,000</td><td>$192,000</td><td>5%</td></tr>
+        <tr><td>Leyes</td><td>$17,000</td><td>$32,000</td><td>$128,000</td><td>10%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="calculadora-precios">
+      <h3 class="glow-text">Calcula tu pago estimado</h3>
+      <label for="carrera-select">Selecciona tu carrera:</label>
+      <select id="carrera-select">
+        <option value="">--Selecciona--</option>
+        <option value="Nutricion">Nutrición</option>
+        <option value="Negocios">Negocios Internacionales</option>
+        <option value="Programacion">Programación</option>
+        <option value="Medicina">Medicina</option>
+        <option value="Leyes">Leyes</option>
+        <option value="Administracion">Administración</option>
+      </select>
+
+      <label for="plan-select">Selecciona el plan:</label>
+      <select id="plan-select">
+        <option value="">--Selecciona--</option>
+        <option value="semestre">Semestre</option>
+        <option value="anio">Año</option>
+        <option value="total">Total Carrera</option>
+      </select>
+
+      <label for="beca-input">¿Tienes beca? (%)</label>
+      <input type="number" id="beca-input" min="0" max="100" value="0" />
+
+      <button id="calcular-btn">Calcular</button>
+
+      <p id="resultado-calculo" class="resultado"></p>
+    </div>
+  </section>
+
+ <div class="social-buttons">
+    <a href="https://www.tiktok.com/@universidad.usvm?_t=ZS-8xSsUJ9pRy9&_r=1" target="_blank" class="social-btn" id="facebook">Tiktok</a>
+    <a href="https://x.com/uusvm?s=21&t=YkkZVSGInf-WJsgWAjqG-A" target="_blank" class="social-btn" id="twitter">Twitter</a>
+    <a href="https://www.instagram.com/usvm_universidad_/profilecard/?igsh=ZzFiMnVmZnZ4ZzIw" target="_blank" class="social-btn" id="instagram">Instagram</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 Universidad USVM. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Carreras - USVM</title>
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <img src="logo.jpeg" alt="Logo USVM" class="logo" />
+    <h1  class="pulse-text">Universidad USVM</h1>
+  </div>
+  <nav>
+    <button id="menu-toggle">☰ Menú</button>
+    <ul id="menu" class=" menu hidden">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carreras.html">Carreras</a></li>
+      <li><a href="precios.html">Precios y Planes</a></li>
+      <li><a href="mision.html">Misión y Visión</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content-page">
+
+    <section class="videos-section">
+    <h3 class="typing-text glow-text">ACTIVIDADES EXTRACURRICURALES</h3>
+    <video controls class="video-box">
+      <source src="videp2.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <section class="carreras-list">
+    <h2 class="animated-text">Nuestras Carreras</h2>
+
+    <article class="carrera-item">
+      <h3 class="typing-text">Nutrición</h3>
+      <img src="nutricion.jpeg" alt="Nutrición" class="section-img imagen-parpadeo" />
+      <p>Estudia el impacto de la alimentación en la salud y aprende a diseñar planes nutricionales personalizados.</p>
+      <p><strong>Horario:</strong> Lunes a viernes, 8:00 - 14:00</p>
+    </article>
+
+    <article class="carrera-item">
+      <h3 class="typing-text">Negocios Internacionales</h3>
+      <img src="negocios.jpeg" alt="Negocios Internacionales" class="section-img imagen-pulso" />
+      <p>Formación en comercio, finanzas y relaciones internacionales para liderar empresas globales.</p>
+      <p><strong>Horario:</strong> Lunes a viernes, 9:00 - 15:00</p>
+    </article>
+
+    <article class="carrera-item">
+      <h3 class="typing-text">Programación</h3>
+      <img src="proga.jpeg" alt="Programación" class="section-img  imagen-fade-suave" />
+      <p>Desarrollo de software, aplicaciones móviles y tecnologías emergentes.</p>
+      <p><strong>Horario:</strong> Lunes a viernes, 14:00 - 20:00</p>
+    </article>
+
+    <article class="carrera-item">
+      <h3 class="typing-text">Medicina</h3>
+      <img src="medicina.jpeg" alt="Medicina" class="section-img imagen-pulso" />
+      <p>Formación integral en ciencias de la salud con énfasis en investigación y práctica clínica.</p>
+      <p><strong>Horario:</strong> Lunes a sábado, 7:00 - 13:00</p>
+    </article>
+
+    <article class="carrera-item">
+      <h3 class="typing-text">Leyes</h3>
+      <img src="leyes.jpeg" alt="Leyes" class="section-img imagen-fade-suave"/>
+      <p>Estudio del derecho nacional e internacional para formar profesionales en litigio y asesoría legal.</p>
+      <p><strong>Horario:</strong> Lunes a viernes, 10:00 - 16:00</p>
+    </article>
+
+    <article class="carrera-item">
+      <h3 class="typing-text">Administración</h3>
+      <img src="empresas.jpeg" alt="Administración de Empresas" class="section-img imagen-parpadeo"/>
+      <p>Gestión, liderazgo y estrategia para el éxito en el mundo empresarial.</p>
+      <p><strong>Horario:</strong> Lunes a viernes, 8:00 - 14:00</p>
+    </article>
+  </section>
+
+  <section class="mapa-campus">
+    <h2 class="animated-text glow-text">Mapa de Campus</h2>
+    <nav class="campus-menu">
+      <button class="campus-btn" data-campus="central">Campus Central</button>
+      <button class="campus-btn" data-campus="norte">Campus Norte</button>
+      <button class="campus-btn" data-campus="sur">Campus Sur</button>
+      <button class="campus-btn" data-campus="este">Campus Este</button>
+      <button class="campus-btn" data-campus="oeste">Campus Oeste</button>
+    </nav>
+    <div id="campus-info" class="campus-info">
+       <img id="campus-img" src="campus.principal.jpeg" alt="Campus Central" />
+      <iframe id="campus-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.553603927259!2d-122.08424968469136!3d37.42199977982509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5d281dcdf1f%3A0x7c12a7fa66af6163!2sGoogleplex!5e0!3m2!1ses!2smx!4v1689792821851!5m2!1ses!2smx" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+</main>
+<script>
+  const campusImages = {
+    central: 'campus.principal.jpeg',
+    norte: 'campusnorte.jpeg',
+    sur: 'campussur.jpeg',
+    este: 'campuseste.jpeg',
+    oeste: 'campusoeste.jpeg'
+  };
+
+  document.querySelectorAll('.campus-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const campus = button.dataset.campus;
+      const img = document.getElementById('campus-img');
+
+      if (campusImages[campus]) {
+        img.src = campusImages[campus];
+        img.alt = `Campus ${campus.charAt(0).toUpperCase() + campus.slice(1)}`;
+      } else {
+        console.warn('Imagen no encontrada para el campus:', campus);
+      }
+    });
+  });
+</script>
+<footer>
+  <p>© 2025 Universidad USVM. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js.js"></script>
+</body>
+</html>

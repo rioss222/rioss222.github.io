@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Misión, Visión y Valores - USVM</title>
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <img src="logo.jpeg" alt="Logo USVM" class="logo" />
+    <h1  class="pulse-text">Universidad USVM</h1>
+  </div>
+  <nav>
+    <button id="menu-toggle">☰ Menú</button>
+    <ul id="menu" class="menu hidden">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carreras.html">Carreras</a></li>
+      <li><a href="precios.html">Precios y Planes</a></li>
+      <li><a href="mision.html">Misión y Visión</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content-page">
+
+  <section class="mision-vision-section">
+    <h2 class="animated-text glow-text">Nuestra Misión</h2>
+    <p>
+      En la Universidad USVM nos dedicamos a formar profesionales íntegros, con alto sentido ético, comprometidos con la sociedad y capaces de innovar en sus campos de acción. Buscamos ofrecer educación de calidad, accesible y con un enfoque humanista que impulse el desarrollo sostenible.
+    </p>
+    <div class="img-group">
+      <img src="mision1.jpeg" alt="Profesionales Éticos" class="section-img imagen-parpadeo" />
+      <img src="mision2.jpeg" alt="Compromiso Social" class="section-img imagen-pulso" />
+    </div>
+
+    <h2 class="animated-text glow-text">Nuestra Visión</h2>
+    <p>
+      Ser una institución líder en la educación superior, reconocida por su excelencia académica, investigación relevante y fuerte vinculación con la comunidad, que fomenta el crecimiento personal y profesional de sus estudiantes.
+    </p>
+    <div class="img-group single-img">
+      <img src="valor3.jpeg" alt="Excelencia Académica" class="section-img imagen-parpadeo" />
+    </div>
+  </section>
+
+  <section class="valores-section">
+    <h2 class="animated-text pulse-text glow-text">Valores que fomentamos</h2>
+    <ul class="valores-list">
+      <li><strong class="typing-text">Responsabilidad:</strong class="glow-text"> Compromiso con la sociedad y el medio ambiente.</li>
+        <br>
+      <li><strong class="typing-text">Innovación:</strong class="glow-text"> Fomento del pensamiento crítico y creatividad.</li>
+        <br>
+      <li><strong class="typing-text">Respeto:</strong class="glow-text"> Diversidad y equidad en todos los espacios.</li>
+        <br>
+      <li><strong class="typing-text">Excelencia:</strong class="glow-text"> Búsqueda constante del conocimiento y calidad.</li>
+        <br>
+      <li><strong class="typing-text">Trabajo en equipo:</strong class="glow-text"> Colaboración y solidaridad.</li>
+        <br>
+    </ul>
+    <div class="img-group">
+      <img src="valor1.jpeg" alt="Innovación" class="section-img imagen_fade_suave" />
+      <img src="valores2.jpeg" alt="Trabajo en Equipo" class="section-img imagen-parpadeo" />
+    </div>
+  </section>
+
+  <section class="historia-section">
+    <h2 class="animated-text typing-text glow-text">Historia de la Universidad</h2>
+    <p>
+      Fundada en 1995, la Universidad USVM ha crecido exponencialmente desde sus humildes comienzos. Actualmente cuenta con 5 campus distribuidos en distintas regiones, atendiendo a más de 25,000 estudiantes con un cuerpo docente altamente calificado.
+    </p>
+    <div class="img-group">
+      <img src="unianti.jpeg" alt="Fundación" class="section-img imagen-fade-suave" />
+    </div>
+
+    <section class="barras-campus-container">
+  <h2 class="pulse-text">Distribución de Alumnos por Campus</h2>
+
+  <div class="barra-con-label">
+   <span class="nombre-campus">campus principal</span>
+  <div class="alumnos-barra" data-campus="central">
+  <div class="relleno"></div>
+  <div class="tooltip">80%</div>
+</div>
+</div>
+
+
+<div class="barra-con-label">
+     <span class="nombre-campus">campus norte</span>
+<div class="alumnos-barra" data-campus="norte">
+  <div class="relleno"></div>
+  <div class="tooltip">60%</div>
+</div>
+</div>
+
+<div class="barra-con-label">
+     <span class="nombre-campus">campus sur</span>
+<div class="alumnos-barra" data-campus="sur">
+  <div class="relleno"></div>
+  <div class="tooltip">50%</div>
+</div>
+</div>
+
+</div class="barra-con-label">
+ <span class="nombre-campus">campus este</span>
+<div class="alumnos-barra" data-campus="este">
+  <div class="relleno"></div>
+  <div class="tooltip">70%</div>
+</div>
+</div>
+
+
+</div class="barra-con-label">
+ <span class="nombre-campus">campus oeste</span>
+<div class="alumnos-barra" data-campus="oeste">
+  <div class="relleno"></div>
+  <div class="tooltip">65%</div>
+</div>
+</div>
+
+</section>
+
+
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.alumnos-barra').forEach(barra => {
+    const porcentaje = parseInt(barra.querySelector('.tooltip').textContent);
+
+    // Animar la barra con un pequeño delay para que se note
+    setTimeout(() => {
+      const relleno = barra.querySelector('.relleno');
+      relleno.style.width = porcentaje + '%';
+      relleno.textContent = porcentaje + '%';
+    }, 100);
+  });
+});
+
+</script>
+
+<footer>
+  <p>© 2025 Universidad USVM. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js.js"></script>
+</body>
+</html>

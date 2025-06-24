@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contacto - USVM</title>
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <img src="logo.jpeg" alt="Logo USVM" class="logo" />
+    <h1  class="pulse-text">Universidad USVM</h1>
+  </div>
+  <nav>
+    <button id="menu-toggle">☰ Menú</button>
+    <ul id="menu" class="menu hidden">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carreras.html">Carreras</a></li>
+      <li><a href="precios.html">Precios y Planes</a></li>
+      <li><a href="mision.html">Misión y Visión</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="content-page">
+
+  <section class="form-section">
+    <h2 class="animated-text pulse-text glow-text">Agenda tu cita</h2>
+    <form id="cita-form" novalidate>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" />
+
+      <label for="fecha">Fecha de la cita:</label>
+      <input type="date" id="fecha" name="fecha" required />
+
+      <label for="hora">Hora de la cita:</label>
+      <input type="time" id="hora" name="hora" required />
+
+      <label for="carrera">Carrera de interés:</label>
+      <select id="carrera" name="carrera" required>
+        <option value="">--Selecciona--</option>
+        <option value="Nutricion">Nutrición</option>
+        <option value="Negocios">Negocios Internacionales</option>
+        <option value="Programacion">Programación</option>
+        <option value="Medicina">Medicina</option>
+        <option value="Leyes">Leyes</option>
+        <option value="Administracion">Administración</option>
+      </select>
+
+      <label for="mensaje">Mensaje adicional:</label>
+      <textarea id="mensaje" name="mensaje" rows="3"></textarea>
+
+      <label for="campus">Campus preferido:</label>
+      <select id="campus" name="campus" required>
+        <option value="">--Selecciona--</option>
+        <option value="Central">Campus Central</option>
+        <option value="Norte">Campus Norte</option>
+        <option value="Sur">Campus Sur</option>
+        <option value="Este">Campus Este</option>
+        <option value="Oeste">Campus Oeste</option>
+      </select>
+
+      <label for="terminos">
+        <input type="checkbox" id="terminos" name="terminos" required />
+        Acepto términos y condiciones
+      </label>
+
+      <button type="submit" class="btn-animated">Enviar</button>
+    </form>
+  </section>
+
+<section id="generador-horarios">
+  <h2 class="titulo-animado">Generador de Horarios</h2>
+  <form id="form-horario">
+    <label for="materia">Selecciona tu carrera:</label>
+    <select id="materia" name="materia" class="input-text" required>
+      <option value="" disabled selected>Elige tu carrera</option>
+      <option value="nutricion">Nutricion</option>
+      <option value="medicina">Medicina</option>
+      <option value="Programacion">Programacion</option>
+      <option value="negocios">Negocios internacionales</option>
+      <option value="leyes">Leyes</option>
+    </select>
+
+    <label>Días disponibles:</label>
+    <div class="checkbox-group" id="dias">
+      <label><input type="checkbox" value="Lunes" /> Lunes</label>
+      <label><input type="checkbox" value="Martes" /> Martes</label>
+      <label><input type="checkbox" value="Miércoles" /> Miércoles</label>
+      <label><input type="checkbox" value="Jueves" /> Jueves</label>
+      <label><input type="checkbox" value="Viernes" /> Viernes</label>
+      <label><input type="checkbox" value="Sábado" /> Sábado</label>
+    </div>
+
+    <label>Horas disponibles:</label>
+    <div class="checkbox-group" id="horas">
+      <label><input type="checkbox" value="7:00-9:00" /> 7:00 - 9:00</label>
+      <label><input type="checkbox" value="9:00-11:00" /> 9:00 - 11:00</label>
+      <label><input type="checkbox" value="11:00-13:00" /> 11:00 - 13:00</label>
+      <label><input type="checkbox" value="14:00-16:00" /> 14:00 - 16:00</label>
+      <label><input type="checkbox" value="16:00-18:00" /> 16:00 - 18:00</label>
+      <label><input type="checkbox" value="18:00-20:00" /> 18:00 - 20:00</label>
+    </div>
+
+    <button type="submit" class="btn-animado">Generar Horario</button>
+  </form>
+
+  <div id="resultado" style="margin-top: 2rem;"></div>
+</section>
+
+
+  <section class="mapa-campus-contacto">
+    <h2 class="animated-text glow-text">Mapa de Campus</h2>
+    <nav class="campus-menu">
+      <button class="campus-btn" data-campus="central">Campus Central</button>
+      <button class="campus-btn" data-campus="norte">Campus Norte</button>
+      <button class="campus-btn" data-campus="sur">Campus Sur</button>
+      <button class="campus-btn" data-campus="este">Campus Este</button>
+      <button class="campus-btn" data-campus="oeste">Campus Oeste</button>
+    </nav>
+    <div id="campus-info-contacto" class="campus-info">
+      <img id="campus-img" src="campus.principal.jpeg" alt="Campus Central" />
+      <iframe id="campus-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.553603927259!2d-122.08424968469136!3d37.42199977982509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5d281dcdf1f%3A0x7c12a7fa66af6163!2sGoogleplex!5e0!3m2!1ses!2smx!4v1689792821851!5m2!1ses!2smx" 
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+</main>
+<script>
+  const campusImages = {
+    central: 'campus.principal.jpeg',
+    norte: 'campusnorte.jpeg',
+    sur: 'campussur.jpeg',
+    este: 'campuseste.jpeg',
+    oeste: 'campusoeste.jpeg'
+  };
+
+  document.querySelectorAll('.campus-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const campus = button.dataset.campus;
+      const img = document.getElementById('campus-img');
+
+      if (campusImages[campus]) {
+        img.src = campusImages[campus];
+        img.alt = `Campus ${campus.charAt(0).toUpperCase() + campus.slice(1)}`;
+      } else {
+        console.warn('Imagen no encontrada para el campus:', campus);
+      }
+    });
+  });
+</script>
+
+<footer>
+  <p>© 2025 Universidad USVM. Todos los derechos reservados.</p>
+</footer>
+<script>
+const form = document.getElementById('form-horario');
+const resultado = document.getElementById('resultado');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const materia = form.materia.value;
+  if (!materia) {
+    alert("Por favor selecciona una materia.");
+    return;
+  }
+
+  // Días seleccionados
+  const diasChecked = [...form.querySelectorAll('#dias input[type=checkbox]:checked')].map(i => i.value);
+  if (diasChecked.length === 0) {
+    alert("Selecciona al menos un día.");
+    return;
+  }
+
+  // Horas seleccionadas
+  const horasChecked = [...form.querySelectorAll('#horas input[type=checkbox]:checked')].map(i => i.value);
+  if (horasChecked.length === 0) {
+    alert("Selecciona al menos una hora.");
+    return;
+  }
+
+  // Construir tabla de horario
+  let tablaHTML = '<table><thead><tr><th>Materia</th>';
+  diasChecked.forEach(dia => {
+    tablaHTML += `<th>${dia}</th>`;
+  });
+  tablaHTML += '</tr></thead><tbody><tr>';
+  tablaHTML += `<td>${materia}</td>`;
+
+  diasChecked.forEach(() => {
+    tablaHTML += `<td>${horasChecked.join(', ')}</td>`;
+  });
+
+  tablaHTML += '</tr></tbody></table>';
+
+  resultado.innerHTML = tablaHTML;
+});
+</script>
+<script src="js.js"></script>
+</body>
+</html>

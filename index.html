@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Universidad USVM - Inicio</title>
+<link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+ 
+  <div  class="animacion-libro-container">
+    <div class="libro">
+  <div class="portada">USVM</div>
+  <div class="hoja hoja1"></div>
+  <div class="hoja hoja2"></div>
+  <div class="hoja hoja3"></div>
+  <div class="hoja hoja4"></div>
+  <div class="hoja hoja5"></div>
+  <div class="hoja hoja6"></div>
+</div>
+      <div class="portada">
+       <h1 id="bienvenidos-texto" class="glow-text">BIENVENIDOS</h1>
+      </div>
+      <div class="hoja"></div>
+    </div>
+ 
+   
+  </div>
+
+
+<div id="contenido-principal" class="hidden">
+
+<header>
+  <div class="logo-title">
+    <img src="logo.jpeg" alt="Logo USVM" class="logo" />
+    <h1 class="pulse-text">Universidad USVM</h1>
+  </div>
+  <nav>
+    <button id="menu-toggle">☰ Menú</button>
+    <ul id="menu" class="menu hidden">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="carreras.html">Carreras</a></li>
+      <li><a href="precios.html">Precios y Planes</a></li>
+      <li><a href="mision.html">Misión y Visión</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="intro-section">
+    <h2 class="animated-text">Bienvenido a la Universidad USVM</h2>
+    <p class="lead-text">Donde el conocimiento y la innovación se unen tanto que inspiran confianza y profesionalismo.</p>
+    <img src="campus.principal.jpeg" alt="Campus Principal" class="img-animated imagen-pulso" />
+  </section>
+
+  <section class="videos-section">
+    <h3>Videos Institucionales</h3>
+    <video controls class="video-box">
+      <source src="video1.mp4" type="video/mp4" />
+    </video>
+    <img src="instalaciones.jpg" alt="Instalaciones USVM" class="img-animated imagen-fade-suave" style="margin-top:20px; max-width: 500px; display:block; margin-left:auto; margin-right:auto;" />
+  </section>
+</main>
+
+<footer>
+  <div class="social-buttons">
+    <a href="https://www.tiktok.com/@universidad.usvm?_t=ZS-8xSsUJ9pRy9&_r=1" target="_blank" class="social-btn" id="facebook">Tiktok</a>
+    <a href="https://x.com/uusvm?s=21&t=YkkZVSGInf-WJsgWAjqG-A" target="_blank" class="social-btn" id="twitter">Twitter</a>
+    <a href="https://www.instagram.com/usvm_universidad_/profilecard/?igsh=ZzFiMnVmZnZ4ZzIw" target="_blank" class="social-btn" id="instagram">Instagram</a>
+  </div>
+  <p>© 2025 Universidad USVM. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const animacionLibro = document.querySelector(".animacion-libro-container");
+    const contenidoPrincipal = document.getElementById("contenido-principal");
+
+    // Duración total de la animación = 2.5s (hojas) + 1.5s para texto aparecer
+    const duracionAnimacion = 4000; // 4 segundos aprox
+
+    setTimeout(() => {
+      animacionLibro.style.display = "none";
+      contenidoPrincipal.style.display = "block";
+    }, duracionAnimacion);
+  });
+</script>
+<script src="js.js"></script>
+</body>
+</html>
